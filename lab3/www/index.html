@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- NOTE: This viewport meta tag is crucial. It tells mobile phones to scale the website properly so it doesn't look tiny on an iPhone. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nathata Padoungnuk | Portfolio</title>
+    <!-- NOTE: This links your HTML structure to your CSS design rules. Without this, your site is just plain black-and-white text. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NOTE: The 'portfolio-canvas' is our master container. Instead of the website scrolling forever, this locks everything into one neat, app-like screen. -->
+    <div class="portfolio-canvas">
+
+        <!-- ============================================== -->
+        <!-- INTRO SECTION (Landing Page) -->
+        <!-- ============================================== -->
+        <div id="introSection">
+
+            <!-- NOTE: The Navbar section. Flexbox in the CSS pushes the brand to the left and the menu icons to the right. -->
+            <div class="canvas-nav">
+                <div class="canvas-brand">
+                    <img src="images/geography_rmbg.png" alt="Profile Mini">
+                    Nathata Padoungnuk
+                </div>
+                <div class="canvas-menu">
+                    <button class="icon-btn" title="LinkedOut"
+                        onclick="alert('Currently busy scouting wonderkids and negotiating a £100M transfer for Man Utd. Please do not disturb.')">
+                        👔
+                    </button>
+                    <button class="icon-btn" title="WhatsMap"
+                        onclick="alert('Error: Sorry I\'m really busy trying to fix the negative amenities in Uruk in Civ VI. Send a carrier pigeon instead.')">
+                        📱
+                    </button>
+                    <button class="icon-btn" title="SnailMail"
+                        onclick="alert('Error: Sorry I\'m really busy trying to fix the negative amenities in Uruk in Civ VI. Send a carrier pigeon instead.')"
+                        style="text-decoration: none;">
+                        🐌
+                    </button>
+                </div>
+            </div>
+
+            <!-- NOTE: The Hero Section is the main stage. It is split into two halves: left (text) and right (image). -->
+            <div class="hero-section">
+
+                <!-- Left Content: Contains your pitch and primary buttons -->
+                <div class="hero-content">
+                    <div class="tagline">In situationship with Geography</div>
+                    <h1 class="hero-title">
+                        I DON'T<br>KNOW<br><span>WHAT DID I DO.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        I always try to combine my geographic knowledge with GIS, remote sensing, spatial analysis, and
+                        field research to
+                        understand regional development, environmental change, and the relationships between people in
+                        any
+                        specificplaces.
+                    </p>
+
+                    <!-- NOTE: This div holds the buttons. The ID 'btnShowCV' is what our JavaScript looks for to trigger the page switch. -->
+                    <div class="hero-actions">
+                        <button id="btnShowCV" class="btn-primary">
+                            My CV <span class="play-icon">▶</span>
+                        </button>
+                        <button class="btn-secondary" title="A me"
+                            onclick="alert('สวัสดีครับอาจารย์ ขอบคุณที่สนใจให้เกรด A ผมนะครับ ผมจะตั้งใจเรียนอย่างสุดความสามารถครับ ปล.ถ้าอาจารย์มีงานให้วิจัยอยากให้เด็กๆช่วยเหลือ ผมพร้อมช่วยเสมอครับผม ฝึกประสบการณ์วิจัยก่อนลงวิจัยจริงครับ ขอบคุณที่สนใจกดปุ่มนี้ครับอาจารย์ รักอาจารย์เสมอครับ')">Give
+                            him an A</button>
+                    </div>
+                </div>
+
+                <!-- Right Content: The visual side -->
+                <div class="hero-image-wrapper">
+                    <!-- NOTE: These badges use 'position: absolute' in CSS to float over the photo. -->
+                    <div class="float-badge badge-1">Spatial Analyst</div>
+                    <img src="images/myself_portraits.jpg" alt="Nathata standing at CMU" class="my-freestyle-photo">
+                    <div class="float-badge badge-2">Data Science</div>
+                    <div class="float-badge badge-3">Environmental Science</div>
+                    <div class="float-badge badge-4">Medical Geography</div>
+                </div>
+            </div>
+
+            <!-- NOTE: The Marquee is the scrolling banner. The text is repeated twice so that when the CSS animation loops, your eyes can't see the cut. -->
+            <div class="marquee-banner">
+                <div class="marquee-content">
+                    <span>Spatial Analysis ✳ Multimedia Cartography ✳ ArcGIS Pro ✳ Fullstack?? ✳ QGIS ✳ Wanna learn more
+                        about health ✳ Spatial Analysis ✳ Multimedia Cartography ✳ ArcGIS Pro ✳ Fullstack?? ✳ QGIS ✳
+                        Wanna learn more about health ✳</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- CV SECTION (Modern Grid Layout) -->
+        <!-- ============================================== -->
+        <!-- NOTE: The class 'd-none' is attached here. Our JavaScript removes this class to make the CV appear. -->
+        <!-- ============================================== -->
+        <!-- CV SECTION (Full Professional Layout) -->
+        <!-- ============================================== -->
+        <div id="cvSection" class="cv-container d-none">
+            <button id="btnBackToIntro" class="btn-secondary" style="margin-bottom: 30px;">
+                &larr; Back to Home
+            </button>
+
+            <!-- CV Header -->
+            <div class="cv-header">
+                <h1 style="font-size: 2.5rem; margin-bottom: 5px; color: #0f172a;">Nathata Padoungnuk</h1>
+                <p style="font-size: 1.1rem; color: #0ea5e9; font-weight: 700; margin-bottom: 5px;">
+                    Geography Undergraduate | Still learning geography | Spatial Analysis
+                </p>
+                <p style="color: #64748b; font-weight: 500; font-size: 0.95rem;">
+                    Chiang Mai University (CMU) • GPA: 4.00 • Expected Graduation: 2028
+                </p>
+            </div>
+
+            <!-- Profile Summary -->
+            <div class="cv-section">
+                <h2 class="section-title">Profile</h2>
+                <p class="section-text">
+                    Geography undergraduate with a strong academic interest in GIS, remote sensing, and spatial
+                    analysis. Experienced in applying geospatial tools to academic projects involving environmental
+                    monitoring and regional development. Passionate about combining geographic knowledge with
+                    field-based research to understand spatial patterns and the relationships between people and places.
+                </p>
+            </div>
+
+            <!-- Research & Academic Projects (Using the Card Grid) -->
+            <div class="cv-section">
+                <h2 class="section-title">Research & Academic Projects</h2>
+                <div class="cv-grid">
+
+                    <div class="cv-card">
+                        <h3>ASEAN Field School 2025</h3>
+                        <p class="card-subtitle">Field Researcher | Kelantan, Malaysia</p>
+                        <ul>
+                            <li>Investigated socioeconomic and occupational changes after compulsory education policies.
+                            </li>
+                            <li>Applied Push & Pull Theory and Sorokin's Social Mobility Theory to interpret migration.
+                            </li>
+                            <li>Conducted field research within Siamese and Peranakan Chinese communities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-card">
+                        <h3>Geospatial & Remote Sensing</h3>
+                        <p class="card-subtitle">Applied Academic Projects</p>
+                        <ul>
+                            <li>Still have to learning.</li>
+                            <li>Explored applications for urban expansion, wildfire monitoring, and agricultural change.
+                            </li>
+                            <li>Applied spatial analysis to investigate human-environment phenomena.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-card">
+                        <h3>CubeSat Environmental Monitoring</h3>
+                        <p class="card-subtitle">Top 32 Competitor Concept</p>
+                        <ul>
+                            <li>Developed a CubeSat mission concept focused on urban heat island and temperature
+                                inversion phenomena.</li>
+                            <li>Explored integration of satellite observations with PM and carbon monoxide sensor data.
+                            </li>
+                            <li>Investigated practical applications to solve environmental challenges in Thailand.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="cv-section">
+                <h2 class="section-title">Technical Capabilities</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>GIS & Remote Sensing</h4>
+                        <p>QGIS, ArcGIS Pro / ArcMap, AutoCAD, Google Earth Engine (GEE), ERDAS IMAGINE, ENVI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data & Programming</h4>
+                        <p>Python, PostgreSQL, Geospatial Data Processing, Microsoft Excel, Data Visualization</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Geographic Research</h4>
+                        <p>Cartography, Satellite Image Processing, Land-use Analysis, Field Observation, Qualitative
+                            Research</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities & Languages (Split Layout) -->
+            <div class="cv-section split-section">
+                <div class="split-col">
+                    <h2 class="section-title">Academic Activities</h2>
+                    <ul class="activity-list">
+                        <li><strong>GIS North:</strong> Volunteer Staff @ Social science Openhouse</li>
+                        <li><strong>GIS North:</strong> Google Earth Engine Course Staff 2025</li>
+                    </ul>
+                </div>
+                <div class="split-col">
+                    <h2 class="section-title">Languages</h2>
+                    <ul class="activity-list">
+                        <li><strong>Thai:</strong> Native Proficiency</li>
+                        <li><strong>English:</strong> CEFR B2 (Upper Intermediate)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- NOTE: The Brains of the Operation (JavaScript). This listens for clicks and swaps which section is visible, making it feel like a fast, modern app instead of loading a whole new webpage. -->
+        <script>
+            const introSection = document.getElementById('introSection');
+            const cvSection = document.getElementById('cvSection');
+            const btnShowCV = document.getElementById('btnShowCV');
+            const btnBackToIntro = document.getElementById('btnBackToIntro');
+
+            btnShowCV.addEventListener('click', function () {
+                introSection.classList.add('d-none');
+                cvSection.classList.remove('d-none');
+            });
+
+            btnBackToIntro.addEventListener('click', function () {
+                cvSection.classList.add('d-none');
+                introSection.classList.remove('d-none');
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+/* ==========================================================================
+   style.css - Modern Hero Portfolio (Nathata Padoungnuk)
+   ========================================================================== */
+
+/* --- Base Reset --- */
+body {
+    background-color: #ffffff;
+    /* เปลี่ยนสีพื้นหลัง body เป็นสีเดียวกับหน้าเว็บไปเลย */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* คำสั่งสำคัญ: ห้ามมี Scroll bar เลื่อนขึ้นลง */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- Main Layout: The Canvas Card --- */
+.portfolio-canvas {
+    background-color: #ffffff;
+    width: 100vw;
+    /* ให้กว้างเต็มหน้าจอ */
+    height: 100vh;
+    /* ให้สูงเต็มหน้าจอ */
+    max-width: none;
+    /* ยกเลิกขีดจำกัดความกว้าง */
+    border-radius: 0;
+    /* เอาขอบโค้งออก */
+    box-shadow: none;
+    /* เอาเงาออก */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- Internal Navbar --- */
+.canvas-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    position: relative;
+    z-index: 50;
+    /* Forces the entire navbar to sit above the invisible image box */
+}
+
+/* --- Bootstrap Notification Dot --- */
+.nav-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    background-color: #dc3545;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.canvas-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1c2438;
+}
+
+.canvas-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.canvas-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+
+    /* --- THE CRITICAL ADDITION --- */
+    position: relative;
+}
+
+.icon-btn:hover {
+    background: #f1f5f9;
+}
+
+#introSection {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* ให้ความสูงเต็มพื้นที่ของ .portfolio-canvas */
+    width: 100%;
+}
+
+/* --- Hero Section (Left/Right Split) --- */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    gap: 40px;
+    flex: 1;
+    /* ดันเนื้อหาที่อยู่ข้างใต้มัน (ซึ่งคือแบนเนอร์) ลงไปล่างสุด */
+    align-items: center;
+}
+
+/* Left Content */
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5.5%;
+    /* <--- Increase this to 15% or 20% to push it even further right! */
+    max-width: 650px;
+}
+
+.tagline {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #0f172a;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    width: fit-content;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0f172a;
+    margin-bottom: 10px;
+    margin-top: 1px;
+    letter-spacing: -1px;
+}
+
+.hero-title span {
+    color: #8b5208;
+    /* สีฟ้าเน้นข้อความ */
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 90%;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: 2.5%;
+}
+
+.btn-primary {
+    background-color: #0f172a;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+.btn-primary .play-icon {
+    background: #e9ab0e;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #0f172a;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    border-color: #0f172a;
+    background-color: #f8fafc;
+}
+
+/* Right Content (Image) */
+.hero-image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    height: 100%;
+    /* บังคับความสูง */
+    position: relative;
+    /* สำคัญมาก: เพื่อให้รูปลอยอยู่เฉพาะในกรอบฝั่งขวา */
+    background: transparent;
+    /* บังคับโปร่งใส */
+    border: none;
+    box-shadow: none;
+}
+
+.my-freestyle-photo {
+    position: absolute;
+    bottom: -1px;
+    /* Keeps you sitting right on top of the scrolling banner */
+    right: 15%;
+
+    /* --- 1. Bulletproof Sizing --- */
+    height: 120vh !important;
+    /* <--- Change this to 80vh or 85vh if you still need to be taller */
+    width: auto !important;
+    /* This is the magic rule that stops you from getting squished! */
+
+    /* --- 2. Kill the Hidden Interference --- */
+    max-width: none !important;
+    max-height: none !important;
+    transform: none !important;
+    /* This stops the rotation and fixes your chopped arm */
+
+    /* --- 3. Clean Base Styles --- */
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    object-fit: contain !important;
+    z-index: 10;
+}
+
+.hero-image-wrapper img {
+    width: 50%;
+    max-width: 900px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: rotate(2deg);
+    transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* Floating Badges on Image */
+.float-badge {
+    position: absolute;
+    background: #8b5208;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge-1 {
+    top: 20%;
+    left: 25%;
+    z-index: 15;
+    /* ให้อยู่เหนือรูป */
+}
+
+.badge-2 {
+    bottom: 25%;
+    right: 15%;
+    background: #475569;
+    z-index: 15;
+}
+
+.badge-3 {
+    bottom: 15%;
+    left: 15%;
+    z-index: 15;
+    /* ให้อยู่เหนือรูป */
+}
+
+.badge-4 {
+    top: 15%;
+    right: 10%;
+    background: #475569;
+    z-index: 15;
+}
+
+/* --- Marquee Banner (Bottom Blue Strip) --- */
+.marquee-banner {
+    background-color: #975b07a2;
+    color: white;
+    padding: 25px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation: scroll-left 10s linear infinite;
+}
+
+.marquee-content span {
+    margin: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- CV Section (Hidden by default) --- */
+.cv-container {
+    padding: 40px;
+    background: #fff;
+
+    /* --- THE INTERNAL SCROLL MAGIC --- */
+    height: 100vh;
+    /* Forces the CV page to exactly fill the screen */
+    overflow-y: auto;
+    /* Tells the browser: "If the content is taller than the screen, add a scrollbar just for this section!" */
+    box-sizing: border-box;
+    /* Prevents the padding from breaking the 100vh height limit */
+}
+
+.d-none {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 40px;
+    }
+}
+
+/* ==========================================================================
+   CV Layout Upgrades
+   ========================================================================== */
+
+.cv-section {
+    margin-bottom: 45px;
+}
+
+.section-title {
+    color: #0f172a;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+
+.section-text {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Enhancing the Project Cards for Lists */
+.card-subtitle {
+    color: #0ea5e9 !important;
+    font-size: 0.85rem !important;
+    font-weight: 700;
+    margin-bottom: 15px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cv-card ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.cv-card li {
+    margin-bottom: 8px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    /* Automatically creates columns based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.skill-category h4 {
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.skill-category p {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Activities & Languages Split */
+.split-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.split-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.activity-list li {
+    margin-bottom: 12px;
+}
+
+/* Custom Checkmark Bullet Points */
+.activity-list li::before {
+    content: "▹";
+    color: #0ea5e9;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

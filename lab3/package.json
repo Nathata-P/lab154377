@@ -1,0 +1,20 @@
+{
+  "name": "lab1_nodejs",
+  "version": "1.0.0",
+  "description": " lab1_nodejs",
+  "keywords": [
+    "lab1",
+    "nodejs",
+    "154377"
+  ],
+  "license": "ISC",
+  "author": "nathata padoungnuk",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
